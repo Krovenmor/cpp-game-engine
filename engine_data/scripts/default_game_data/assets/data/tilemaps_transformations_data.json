@@ -1,0 +1,20 @@
+{
+    "um_structs": {
+        "tilemap_test (id: 0)": {
+            "info": "tilemap_test",
+            "origin": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "position": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "rotation": 0.0,
+            "scale": {
+                "x": 3.130000114440918,
+                "y": 3.119999885559082
+            }
+        }
+    }
+}

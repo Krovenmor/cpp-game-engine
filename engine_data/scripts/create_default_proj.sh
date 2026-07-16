@@ -8,6 +8,7 @@ OLD_H="default.h"
 OLD_CPP="default.cpp"
 OLD_CPP_MAIN="main.cpp"
 OLD_CMAKE="CMakeLists.txt"
+LIB_NAME="libSFML_project.a"
 
 NEW_H="${PROJ_NAME}.h"
 NEW_CPP="${PROJ_NAME}.cpp"
@@ -39,6 +40,9 @@ replace_text "$OLD_H" "$NEW_H" "$DATA_DIR/$NEW_CPP"
 
 mkdir -p "$DEST_DIR/src"
 mkdir -p "$DEST_DIR/build"
+mkdir -p "$DEST_DIR/build/lib"
+mkdir -p "$DEST_DIR/include"
+mkdir -p "$DEST_DIR/external"
 
 cp -R "$DATA_DIR/"* "$DEST_DIR/"
 
@@ -56,6 +60,10 @@ if [ -f "$DEST_DIR/src/temp_main.cpp" ]; then
     mv "$DEST_DIR/src/temp_main.cpp" "$DEST_DIR/src/$OLD_CPP_MAIN"
 fi
 
+cp "../build/$LIB_NAME" "$DEST_DIR/build/lib/"
+cp -r "../include/"* "$DEST_DIR/include/"
+cp -r "../external/"* "$DEST_DIR/external/"
+
 rm -f "$DATA_DIR/$NEW_H" "$DATA_DIR/$NEW_CPP" "$DATA_DIR/temp_cmake.txt" "$DATA_DIR/temp_main.cpp"
 
 echo "------------------------------------------"
@@ -64,6 +72,7 @@ echo "Структура:"
 echo "$DEST_DIR/"
 echo "├── vcpkg.json"
 echo "├── CMakeLists.txt"
+echo "├── include/"
 echo "└── src/"
 echo "    ├── $NEW_H"
 echo "    ├── $NEW_CPP"

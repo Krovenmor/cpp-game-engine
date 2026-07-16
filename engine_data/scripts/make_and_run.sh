@@ -29,5 +29,6 @@ if [ $? -eq 0 ]; then
     echo "Сборка успешна! Запускаю..."
     ./build/$filename
 else
-    echo "Ошибка сборки! Проверь build/build_errors.txt"
+    echo "Ошибка сборки!"
+    cat build/build_errors.txt
 fi

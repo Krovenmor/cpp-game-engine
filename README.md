@@ -22,4 +22,6 @@
 ```bash
 cmake -B build -S . -DCMAKE_TOOLCHAIN_FILE=[YOUR_VCPKG_PATH]/scripts/buildsystems/vcpkg.cmake
 cmake --build build
-./engine_data/build/SFML_project_engine
+
+Запуск простенькой обертки для создания проекта\запуска:
+cd engine_data && ./build/SFML_project_engine

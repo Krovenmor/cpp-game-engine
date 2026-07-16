@@ -1,0 +1,6 @@
+{
+    "default_map": "default_map",
+    "maps_paths": {
+        "default_map": "assets/maps/default_map.json"
+    }
+}

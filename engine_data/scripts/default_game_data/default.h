@@ -1,16 +1,15 @@
 #pragma once
 #include <MainCycle/MainCycle.h>
-#include <Utils/TileMap.h>
+#include <BaseClasses/TileMap.h>
 #include <CombinedUsefulClasses/TextWidget.h>
 
 class Text final : public TextWidget {
 public:
-	Text() : TextWidget(Anchor::Center) {
-		set_name("Welcome!");
+	Text() : TextWidget("WelcomeWidget", Anchor::Center) {
+		text->setString("Welcome!");
+		text->setCharacterSize(45);
+		text->setFillColor(sf::Color::Cyan);
 		set_font("materials/Fonts/test.ttf");
-		get_text().setCharacterSize(45);
-		get_text().setString(get_name());
-		get_text().setFillColor(sf::Color::Cyan);
 	}
 };
 

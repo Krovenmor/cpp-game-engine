@@ -1,0 +1,8 @@
+{
+    "antialiasingLevel": 4,
+    "framerate_limit": 60,
+    "is_vertical_sync_enabled": false,
+    "resX": 800,
+    "resY": 800,
+    "window_title": "SFML Game"
+}
