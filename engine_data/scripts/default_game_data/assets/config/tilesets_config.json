@@ -1,0 +1,4 @@
+{
+    "tilesets": {"tilemap_test.json": "assets/tilesets/tilemap_test.json"},
+    "tilesets_path": "assets/tilesets/"
+}
